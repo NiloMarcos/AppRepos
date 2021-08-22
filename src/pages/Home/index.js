@@ -3,10 +3,9 @@ import SearchLogo from '../../assets/pesquisa.svg';
 import EmphasisLogo from '../../assets/destaque.svg';
 import SaveIcon from '../../assets/salvo_azul.svg';
 import ArrowRight from '../../assets/seta_direita_branco.svg';
-import { Container, ContainerSearch, Input, ContainerInformations, Title, SubTitle, ContainerRepos} from './styles';
-import { Text } from 'react-native';
+import { Container, ContainerSearch, Input, ContainerInformations, Title, SubTitle, ContainerRepos, ButtonNextSceen, ButtonNextSceenText} from './styles';
 
-export default function Home() {
+export default function Home({navigation}) {
   return (
     <Container>
       <ContainerSearch>
@@ -23,6 +22,12 @@ export default function Home() {
       <ContainerRepos>
         
       </ContainerRepos>
+
+
+      <ButtonNextSceen onPress={() => navigation.navigate('Repositorios')}>
+        <ButtonNextSceenText>Ver salvos</ButtonNextSceenText>
+        <ArrowRight width={25} height={30} />
+      </ButtonNextSceen>
     </Container>
   );
 }

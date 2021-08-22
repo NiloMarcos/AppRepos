@@ -47,3 +47,23 @@ export const SubTitle = styled.Text`
 export const ContainerRepos = styled.View`
   flex: 1;
 `;
+
+export const ButtonNextSceen = styled.TouchableOpacity`
+  width: 190px;
+  height: 49px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border-radius: 39px;
+  background-color: #2196f3;
+
+  margin-bottom: 10px;
+  margin-left: 180px;
+`;
+
+export const ButtonNextSceenText = styled.Text`
+  font-size: 16px;
+  font-family: 'Arimo_400Regular';
+  color: #FFFFFF;
+  margin-right: 8px;
+`;

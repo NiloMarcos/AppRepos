@@ -11,7 +11,7 @@ export const ContainerSearch = styled.View`
 `;
 
 export const BackButton = styled.TouchableOpacity`
-
+  
 `;
 
 export const Input = styled.TextInput`

@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <Container>
       <ContainerSearch>
-        <Input placeholder="Procurar repositorio" />
+        <Input placeholder="Procurar organizações" />
       </ContainerSearch>
     </Container>
   );

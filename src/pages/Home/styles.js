@@ -22,11 +22,10 @@ export const Input = styled.TextInput`
   font-family: 'Arimo_400Regular';
   color: #969696;
   padding-left: 17px;  
-  /* background-color: #c4c4c4; */
 `;
 
 export const SearchOriganization = styled.TouchableOpacity`
-
+  align-items: center;
 `;
 
 export const ContainerInformations = styled.View`
@@ -48,8 +47,21 @@ export const SubTitle = styled.Text`
   font-size: 16px;
 `;
 
-export const ContainerRepos = styled.View`
+export const ContainerRepos = styled.ScrollView`
   flex: 1;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 7px;
+  margin-bottom: 7px;
+`;
+
+export const ContainerInfoRepos = styled.View`
+  flex: 1;
+  justify-content: center;
+  width: 353px;
+  height: 130px;
+  margin-top: 5px;
+  border-radius: 14px;
 `;
 
 export const ButtonNextSceen = styled.TouchableOpacity`
@@ -60,7 +72,6 @@ export const ButtonNextSceen = styled.TouchableOpacity`
   flex-direction: row;
   border-radius: 39px;
   background-color: #2196f3;
-
   margin-bottom: 10px;
   margin-left: 180px;
 `;
@@ -70,4 +81,39 @@ export const ButtonNextSceenText = styled.Text`
   font-family: 'Arimo_400Regular';
   color: #FFFFFF;
   margin-right: 8px;
+`;
+
+export const TextApi = styled.Text`
+  font-size: 16px;
+  font-family: 'Arimo_400Regular';
+  color: #2196f3;
+  margin-left: 60px;
+`;
+
+export const TextApiDescription = styled.Text`
+  font-size: 16px;
+  font-family: 'Arimo_400Regular';
+  color: #636363;
+  margin-left: 60px;
+`;
+
+export const Image = styled.Image`
+  width: 50px;
+  height: 50px;
+margin-top: -44px;
+`;
+
+export const ButtonSave = styled.TouchableOpacity`
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-left: 170px;
+  margin-top: 15px;
+`;
+
+export const TextSave = styled.Text`
+  font-size: 16px;
+  font-family: 'Arimo_400Regular';
+  color: #2196f3;
+  margin-left: -40px;
 `;

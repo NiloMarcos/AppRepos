@@ -3,19 +3,31 @@ import SearchIcon from '../../assets/pesquisa.svg';
 import EmphasisIcon from '../../assets/destaque.svg';
 import SaveIcon from '../../assets/salvo_azul.svg';
 import ArrowRight from '../../assets/seta_direita_branco.svg';
-import { Container, ContainerSearch, Input, ContainerInformations, Title, SubTitle, ContainerRepos, ButtonNextSceen, ButtonNextSceenText} from './styles';
+import api from '../../services/api';
+import { Container, ContainerSearch, Input, SearchOriganization, ContainerInformations, Title, SubTitle, ContainerRepos, ButtonNextSceen, ButtonNextSceenText} from './styles';
 
 export default function Home({navigation}) {
-  const [newRepo, setNewRepo] = useState('');
-  const [repoApi, setRepoApi] = useState([]);
+  const [newOrg, setNewOrg] = useState('');
+  const [organizations, setOrganizations] = useState([]);
 
-  console.log(newRepo);
+
+  async function handleSubmit(){
+    const response = await api.get(`/repos/${newOrg}`);
+    const data = {
+      name: response.data.name,
+      avatar: response.data.avatar_url,
+    }
+    setOrganizations([...organizations, data]);
+    setNewOrg('');
+  }
 
   return (
     <Container>
       <ContainerSearch>
-        <Input placeholder="Procurar organizações..." maxLength={35} value={newRepo} onChangeText={(text) => setNewRepo(text)} />
-        <SearchIcon  width={120} height={30} top={62} left={-70} />
+        <Input placeholder="Procurar organizações..." maxLength={35} value={newOrg} onChangeText={(text) => setNewOrg(text)} />
+        <SearchOriganization onPress={() => handleSubmit()}>
+          <SearchIcon  width={120} height={30} top={63} left={-55} />
+        </SearchOriganization>
       </ContainerSearch>
 
       <ContainerInformations>
@@ -27,7 +39,6 @@ export default function Home({navigation}) {
       <ContainerRepos>
         
       </ContainerRepos>
-
 
       <ButtonNextSceen onPress={() => navigation.navigate('Repositorios')}>
         <ButtonNextSceenText>Ver salvos</ButtonNextSceenText>

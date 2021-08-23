@@ -25,6 +25,10 @@ export const Input = styled.TextInput`
   /* background-color: #c4c4c4; */
 `;
 
+export const SearchOriganization = styled.TouchableOpacity`
+
+`;
+
 export const ContainerInformations = styled.View`
   margin-top: 32px;
   flex-direction: column;

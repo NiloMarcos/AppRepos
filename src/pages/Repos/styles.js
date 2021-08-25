@@ -1,4 +1,4 @@
-import styled from 'styled-components/native';
+import styled from "styled-components/native";
 
 export const Container = styled.View`
   flex: 1;
@@ -11,7 +11,8 @@ export const ContainerSearch = styled.View`
 `;
 
 export const BackButton = styled.TouchableOpacity`
-  
+  margin-top: 1px;
+  margin-right: 5px;
 `;
 
 export const Input = styled.TextInput`
@@ -21,7 +22,10 @@ export const Input = styled.TextInput`
   margin-top: 52px;
   padding-left: 14px;
   font-size: 16px;
-  font-family: 'Arimo_400Regular';
+  font-family: "Arimo_400Regular";
 `;
 
-export const ContainerSaveRepos = styled.View``;
+export const ButtonSearch = styled.TouchableOpacity`
+  margin-top: 1px;
+  margin-right: 5px;
+`;
